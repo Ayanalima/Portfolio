@@ -5,9 +5,7 @@ body {
     -moz-animation: Background 25s ease infinite;
     animation: Background 25s ease infinite;
 
-    display: flex;
-	justify-content: center;
-	align-items: center;
+	
 	min-height: 100vh;
   }
  
@@ -92,6 +90,7 @@ body {
       width: 100%;
       height: 100vh;
       overflow: hidden;
+      z-index: -2;
   }
   .bubbles 
   {
@@ -133,17 +132,229 @@ body {
 
 ul {
   display: flex;  
-  flex-direction: rows;
+  width: 400px;
+  margin-inline-end: 8px;
+}
+
+li{
+  list-style: none;
+  padding: 7px;
+  float: right;
+  width: 25%;
+  text-align: center;
+}
 }
 
 nav{
   display: flex ;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-between;  
+}
+
+nav {
+  position: fixed;
+  width: 100%;
 }
 
 header { 
   display: flex;
-  justify-content: space-between;
-  height: 100px;
+    justify-content: space-between;
+    align-items: center;
+  background: linear-gradient(253deg, #0cc898, #1797d2, #864fe1);
+    background-size: 300% 300%;
+    -webkit-animation: Background 25s ease infinite;
+    -moz-animation: Background 25s ease infinite;
+    animation: Background 25s ease infinite;
+  
+}
+
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-gap: 20px;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: max-content 200px 1fr;
+}
+
+
+
+.content img {
+  display: flex;
+      align-items: center;
+      border-radius: 30px;
+      width: 200px;
+}
+.content {
+  display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 30px;
+
+}
+
+.contentBIS div p {
+  background-color: #4a9eb191;
+  border-radius: 24px;
+
+}
+
+p {
+  padding: 40px;
+}
+
+.section {
+  display: flex;
+  
+  justify-content: center;
+}
+
+.contentBIS {
+  display: flex;
+      align-items: center;
+      margin-inline-start: 60px;
+      margin-inline-end: 60px;
+      gap: 16px;
+  }
+
+
+h1 {
+  MARGIN-INLINE-START: 8px;
+}
+
+h2 {
+  align-self: flex-start;
+  margin-inline-start: 40px;
+}
+
+/// button du header///
+
+.btn-group li {
+  background-color: transparent;
+  border: none;
+  color: black; 
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group li:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group li:hover {
+  background-color: lightblue;
+  border-bottom: 1px solid darkblue;
+}
+
+.carte {
+  display: flex;
+    flex-direction: column;
+    background-color: #9977cee6;
+    width: 300px;
+    align-items: center;
+    border-radius: 30px;
+    text-align: justify;
+}
+
+.carteS {
+  display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.carte h2 {
+  align-self: center;
+  margin-inline-start: 0px;
+}
+
+/*** Pour la timeline ***/
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap');
+.design-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 100px 0;
+  font-family: Jost;
+}
+
+.design {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-content {
+  padding: 20px;
+  background: #76c9dd;
+  -webkit-box-shadow: 5px 5px 10px #256685, -5px -5px 10px #242424;
+  box-shadow: 5px 5px 10px #256685, -5px -5px 10px #24607b;
+  border-radius: 5px;
+  color: black;
+  padding: 1.75rem;
+  transition: 0.4s ease;
+  overflow-wrap: break-word !important;
+  margin: 1rem;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+
+.timeline-component {
+  margin: 0px 20px 20px 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .timeline {
+    display: grid;
+    grid-template-columns: 1fr 3px 1fr;
+  }
+  .timeline-middle {
+    position: relative;
+    background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+    width: 3px;
+    height: 100%;
+    z-index: -2;
+  }
+  .main-middle {
+    opacity: 0;
+  }
+  .timeline-circle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+h3 {
+  align-self: center;
+  justify-self: center;
 }
