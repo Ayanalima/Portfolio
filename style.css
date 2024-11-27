@@ -142,6 +142,7 @@ li{
   float: right;
   width: 25%;
   text-align: center;
+  border-bottom: 1px solid #00008b00;
 }
 }
 
